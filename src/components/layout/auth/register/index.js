@@ -3,14 +3,13 @@
  */
 'use strict';
 import React,{Component} from 'react';
-import Login from './login';
 import s from './index.scss';
 
-export default class Auth extends Component{
+export default class Register extends Component{
   render(){
     return(
       <div>
-        {this.props.children||<Login/>}
+        Register
       </div>
     )
   }

@@ -3,14 +3,14 @@
  */
 'use strict';
 import React,{Component} from 'react';
-import Login from './login';
+import Navigator from '../../../plugins/navigator';
 import s from './index.scss';
 
-export default class Auth extends Component{
+export default class Login extends Component{
   render(){
     return(
       <div>
-        {this.props.children||<Login/>}
+        <Navigator to='/home' title="登录账号"/>
       </div>
     )
   }

@@ -1,0 +1,38 @@
+$height:40px;
+.navigatorWrapper{
+  height: $height;
+  width: 100%;
+  background: #367cff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  a{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .back{
+    background: url("../../../images/icon/back.svg") no-repeat;
+    background-size: 100%;
+    margin-left: 3px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    float: left;
+  }
+  span{
+    display: block;
+    float: left;
+    height: $height;
+    line-height: $height;
+    font-size: 14px;
+    color: #fff;
+  }
+  .title{
+    height: $height;
+    line-height: $height;
+    color: #ffffff;
+    text-align: center;
+  }
+}
