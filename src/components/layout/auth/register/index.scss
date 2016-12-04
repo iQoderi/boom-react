@@ -1,0 +1,32 @@
+.registerWrapper{
+  width: 100%;
+  .registerForm {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin-top: 20px;
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    p:last-child {
+      border-top: none;
+    }
+    .formButtonP {
+      border: none;
+      margin-top: 20px;
+    }
+  }
+  .formBottom{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #666;
+    box-sizing: border-box;
+    a{
+      text-decoration: none;
+      outline:none;
+      color: #9ab1d1;
+    }
+  }
+}

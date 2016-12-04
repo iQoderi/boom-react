@@ -1,0 +1,93 @@
+.loginWrapper{
+  width: 100%;
+  .LoginForm{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin-top: 20px;
+    p{
+      padding: 0;
+      margin: 0;
+    }
+    .formButtonP{
+      border: none;
+      margin-top: 20px;
+    }
+  }
+  .formBottom{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #666;
+    box-sizing: border-box;
+    a{
+      text-decoration: none;
+      outline:none;
+      color: #9ab1d1;
+    }
+    a:first-child{
+      float: left;
+    }
+    a:last-child{
+      float: right;
+    }
+  }
+  .registerButton{
+    color: #367cff;
+    font-size: 16px;
+    position: absolute;
+    bottom: 42px;
+    text-align: center;
+    width: 100%;
+    a{
+      text-decoration: none;
+      outline:none;
+      color: #367cff;
+      width: 110px;
+      height: 45px;
+      display: inline-block;
+      line-height: 44px;
+      border: 1px solid #367cff;
+      border-radius: 3px;
+    }
+  }
+}
+
+:global{
+  .commonInput{
+    border: none;
+    display: block;
+    line-height: 20px;
+    height: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-indent: 5px;
+    color: #333;
+    width: 100%;
+    font-size: 12px;
+    outline: none;
+  }
+  .topRadius{
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .bottomRadius{
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  .formButton{
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid #367cff;
+    background: #367cff;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    outline: none;
+  }
+}

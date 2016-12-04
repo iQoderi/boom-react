@@ -34,7 +34,7 @@ function getDefaultModules() {
       },
       {
         test: /\.scss/,
-        loader: 'style-loader!css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!sass-loader?outputStyle=expanded'
+        loader: 'style-loader!css-loader?modules&localIdentName=[local]-[hash:base64:5]!sass-loader?outputStyle=expanded'
       },
       {
         test: /\.less/,
