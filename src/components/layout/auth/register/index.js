@@ -14,6 +14,9 @@ class Register extends Component{
         <Navigator to="/auth/login" title="注册账号"/>
         <form className={s.registerForm}>
           <p className="topRadius">
+            <input type="text" placeholder="请输入您的昵称" className="commonInput"/>
+          </p>
+          <p className="centerRadius">
             <input type="text" placeholder="请输入您的登录邮箱号" className="commonInput"/>
           </p>
           <p className="bottomRadius">
@@ -22,6 +25,7 @@ class Register extends Component{
           <p className={s.formButtonP}>
             <input type="submit" className="formButton" value="立即注册"/>
           </p>
+
         </form>
         <div className={s.formBottom}>
           <Link to="/auth/login">已有账号?</Link>
