@@ -6,13 +6,22 @@ import React,{Component} from 'react';
 import Navigator from '../../../plugins/navigator';
 import s from './index.scss';
 
-export default class ForgetPass extends Component{
+class ForgetPass extends Component{
   render(){
     return(
-      <div>
+      <div className={s.forgetPassWrapper}>
         <Navigator to="/auth/login" title="忘记密码"/>
-        ForgetPass
+        <form className={s.forgetPassForm}>
+          <p className="topRadius">
+            <input type="text" placeholder="请输入您的登录邮箱号" className="commonInput"/>
+          </p>
+          <p className={s.formButtonP}>
+            <input type="submit" className="formButton" value="发送邮件"/>
+          </p>
+        </form>
       </div>
     )
   }
 }
+
+export default  ForgetPass;

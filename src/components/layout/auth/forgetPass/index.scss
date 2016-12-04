@@ -1,4 +1,17 @@
 .forgetPassWrapper{
   width: 100%;
-  
+  .forgetPassForm{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin-top: 20px;
+    p{
+      padding: 0;
+      margin: 0;
+    }
+    .formButtonP{
+      border: none;
+      margin-top: 20px;
+    }
+  }
 }
