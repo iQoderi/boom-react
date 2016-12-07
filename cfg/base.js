@@ -25,7 +25,12 @@ module.exports = {
     hot: true,
     port: defaultSettings.port,
     publicPath: defaultSettings.publicPath,
-    noInfo: false
+    noInfo: false,
+    // proxy:{
+    //   "*":{
+    //     target:process.env.REACT_WEBPACK_ENV==='dev'?'http://127.0.0.1:9001':'http://api.wall.qoder.cn'
+    //   }
+    // }
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],

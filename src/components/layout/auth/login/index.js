@@ -8,19 +8,25 @@ import {Link} from 'react-router';
 import s from './index.scss';
 
 class Login extends Component {
+  _handleLogin = (e)=> {
+    e.preventDefault();
+  }
+
   render() {
     return (
       <div className={s.loginWrapper}>
-        <Navigator to='/home' title="登录账号"/>
+        <Navigator title="登录账号"/>
         <form className={s.LoginForm}>
           <p className="topRadius">
-          <input type="text" placeholder="请输入您的登录邮箱号" className="commonInput"/>
+            <input type="text" placeholder="请输入您的登录邮箱号" className="commonInput"/>
           </p>
-        <p className="bottomRadius">
+          <p className="bottomRadius">
             <input type="text" placeholder="请输入您的密码" className="commonInput"/>
           </p>
           <p className={s.formButtonP}>
-            <input type="submit" className="formButton" value="登录"/>
+            <input
+              onClick={this._handleLogin}
+              type="submit" className="formButton" value="登录"/>
           </p>
         </form>
         <div className={s.formBottom}>
