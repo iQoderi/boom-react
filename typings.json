@@ -7,7 +7,8 @@
     "mocha": "github:DefinitelyTyped/DefinitelyTyped/mocha/mocha.d.ts#ba257a9b91bc0de1bdd9091b6723194c905a902a",
     "react": "registry:dt/react#0.14.0+20160602151522",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
-    "redux-actions": "github:DefinitelyTyped/DefinitelyTyped/redux-actions/redux-actions.d.ts#ba257a9b91bc0de1bdd9091b6723194c905a902a"
+    "redux-actions": "github:DefinitelyTyped/DefinitelyTyped/redux-actions/redux-actions.d.ts#ba257a9b91bc0de1bdd9091b6723194c905a902a",
+    "react-router": "registry:dt/react-router#2.0.0+20160620164637"
   },
   "dependencies": {
     "chai": "registry:npm/chai#3.5.0+20160328084239",

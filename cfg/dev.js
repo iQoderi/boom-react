@@ -23,13 +23,17 @@ let config = Object.assign({}, baseConfig, {
       searchResolveModulesDirectories: false
     })
   ],
-  module: defaultSettings.getDefaultModules()
+  module: defaultSettings.getDefaultModules(),
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  }
 });
 
 // Add needed loaders to the defaults here
 config.module.loaders.push({
   test: /\.tsx?$/,
-  loader: 'react-hot!babel-loader!ts-loader'
+  loader: 'react-hot!ts-loader'
 }, {
   test: /\.(js|jsx)$/,
   loader: 'react-hot!babel-loader',

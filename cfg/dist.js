@@ -26,7 +26,11 @@ let config = Object.assign({}, baseConfig, {
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin()
   ],
-  module: defaultSettings.getDefaultModules()
+  module: defaultSettings.getDefaultModules(),
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  }
 });
 
 // Add needed loaders to the defaults here
@@ -35,7 +39,7 @@ config.module.loaders.push({
   loader: 'babel',
   include: [].concat(
     config.additionalPaths,
-    [ path.join(__dirname, '/../src') ]
+    [path.join(__dirname, '/../src')]
   )
 });
 

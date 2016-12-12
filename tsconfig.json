@@ -17,8 +17,5 @@
   ],
   "include": [
     "src/**/*"
-  ],
-  "filesGlob":[
-    "src/**/*"
   ]
 }

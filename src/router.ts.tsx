@@ -1,8 +1,8 @@
 /**
- * Created by qoder on 16-12-4.
+ * Created by qoder on 16/12/12.
  */
-'use strict';
-import React from 'react';
+///<reference path='../typings/tsd.d.ts'/>
+import * as React from 'react';
 import {Router,Route,hashHistory,IndexRoute} from 'react-router';
 import App from './components/Main.ts';
 import Auth from './components/layout/auth';
