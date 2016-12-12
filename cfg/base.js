@@ -33,7 +33,7 @@ module.exports = {
     // }
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['','.ts','.tsx', '.js', '.jsx'],
     alias: {
       actions: `${defaultSettings.srcPath}/actions/`,
       components: `${defaultSettings.srcPath}/components/`,
