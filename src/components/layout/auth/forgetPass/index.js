@@ -3,7 +3,7 @@
  */
 'use strict';
 import React,{Component} from 'react';
-import Navigator from '../../../plugins/navigator';
+import Navigator from '../../../plugins/navigator/index.ts';
 import s from './index.scss';
 
 class ForgetPass extends Component{

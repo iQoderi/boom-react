@@ -1,9 +1,10 @@
 /**
- * Created by qoder on 16-12-7.
+ *
+ * Created by qoder on 16/12/12.
  */
-'use strict';
-import React from 'react'
-import s from './index.scss'
+declare const require: any;
+import *as React from 'react'
+const s = require('./index.scss');
 
 const Loading = ()=> {
   return (

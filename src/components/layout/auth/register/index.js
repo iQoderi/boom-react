@@ -3,7 +3,7 @@
  */
 'use strict';
 import React,{Component} from 'react';
-import Navigator from '../../../plugins/navigator';
+import Navigator from '../../../plugins/navigator/index.ts';
 import {Link} from 'react-router';
 import s from './index.scss';
 

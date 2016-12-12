@@ -1,13 +1,20 @@
 /**
- * Created by qoder on 16-12-4.
+ *
+ * Created by qoder on 16/12/12.
  */
-'use strict';
-import React from 'react';
-import {Link} from 'react-router';
-import s from './index.scss';
 
-const Navigator =({to,title})=>{
-  return(
+declare const require: any;
+import * as  React from 'react';
+const Link = require('react-router').Link;
+const s = require('./index.scss');
+
+interface NavigatorProps {
+  to: string,
+  title: string
+}
+
+const Navigator = ({to, title}:NavigatorProps)=> {
+  return (
     <div className={s.navigatorWrapper}>
       <Link to={to} style={{display:to?'auto':'none'}}>
         <i className={s.back}/>

@@ -4,7 +4,7 @@
 'use strict';
 import React,{Component} from 'react';
 import Login from './login';
-import Logo from '../../plugins/logo';
+import Logo from '../../plugins/logo/index.ts';
 import s from './index.scss';
 
 export default class Auth extends Component{

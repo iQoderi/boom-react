@@ -20,7 +20,7 @@ function getDefaultModules() {
       {
         test: /\.(js|jsx)$/,
         include: srcPath,
-        loader: 'eslint-loader'
+        loader: 'source-map-loader!eslint-loader'
       }
     ],
     loaders: [
@@ -34,7 +34,7 @@ function getDefaultModules() {
       },
       {
         test: /\.scss/,
-        loader: 'style-loader!css-loader?modules&localIdentName=[local]-[hash:base64:5]!sass-loader?outputStyle=expanded'
+        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[local]-[hash:base64:5]!sass-loader?outputStyle=expanded'
       },
       {
         test: /\.less/,
