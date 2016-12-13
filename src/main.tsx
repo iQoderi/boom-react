@@ -1,10 +1,9 @@
 /**
- *
- * Created by qoder on 16/12/12.
+ * Created by qoder on 16-12-13.
  */
-import React from 'react';
+import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import RouterApp from './router.ts';
+import RouterApp from './router';
 
 const rootElement: HTMLElement = document.getElementById('app');
 

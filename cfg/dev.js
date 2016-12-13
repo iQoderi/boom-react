@@ -23,11 +23,7 @@ let config = Object.assign({}, baseConfig, {
       searchResolveModulesDirectories: false
     })
   ],
-  module: defaultSettings.getDefaultModules(),
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  }
+  module: defaultSettings.getDefaultModules()
 });
 
 // Add needed loaders to the defaults here
