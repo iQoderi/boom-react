@@ -10,9 +10,9 @@ import TouchBackStore from './stores/touchBackStore';
 import RouterApp from './router';
 
 const rootElement = document.getElementById('app');
-
+const touchBackStore=new TouchBackStore();
 ReactDOM.render(
-  <Provider touchBackStore={TouchBackStore}>
+  <Provider touchBackStore={touchBackStore}>
     {RouterApp()}
   </Provider>,
   rootElement
