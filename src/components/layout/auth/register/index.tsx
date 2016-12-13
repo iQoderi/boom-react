@@ -11,7 +11,7 @@ import {Link} from 'react-router'
 const s = require('./index.scss');
 
 class Register extends React.Component<any,any> {
-    render() {
+    public render() {
         return (
             <div className={s.registerWrapper}>
                 <TouchBack target="/auth/login">

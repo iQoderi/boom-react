@@ -5,11 +5,15 @@
 ///<reference path="../typings/modules/react-dom/index.d.ts"/>
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import {Provider} from 'mobx-react';
+import TouchBackStore from './stores/touchBackStore';
 import RouterApp from './router';
 
 const rootElement = document.getElementById('app');
 
 ReactDOM.render(
-  RouterApp(),
+  <Provider touchBackStore={TouchBackStore}>
+    {RouterApp()}
+  </Provider>,
   rootElement
 )
