@@ -7,12 +7,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {Provider} from 'mobx-react';
 import TouchBackStore from './stores/touchBackStore';
+import UIStore from './stores/uiStore';
 import RouterApp from './router';
 
 const rootElement = document.getElementById('app');
-const touchBackStore=new TouchBackStore();
 ReactDOM.render(
-  <Provider touchBackStore={touchBackStore}>
+  <Provider touchBackStore={TouchBackStore} UIStore={UIStore}>
     {RouterApp()}
   </Provider>,
   rootElement

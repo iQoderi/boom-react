@@ -41,4 +41,4 @@ class TouchBackStore {
   }
 }
 
-export default TouchBackStore;
+export default new TouchBackStore();

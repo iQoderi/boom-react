@@ -4,7 +4,7 @@
  */
 declare const require: any;
 import * as React from 'react';
-import Logo from '../../plugins/logo/index.ts';
+import Logo from '../../plugins/logo/index';
 import Login from './login';
 const s = require('./index.scss');
 
