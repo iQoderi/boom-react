@@ -10,7 +10,8 @@ const apiMaker = (path: string): string=> {
 
 const API = {
   auth: {
-    login: apiMaker('auth/login')
+    login: apiMaker('auth/login'),
+    register: apiMaker('auth/register')
   }
 }
 

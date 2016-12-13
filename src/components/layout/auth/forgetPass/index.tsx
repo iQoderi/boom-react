@@ -6,25 +6,27 @@
 declare const require: any;
 import * as React from 'react';
 import Navigator from '../../../plugins/navigator/index.ts';
-import {Link} from 'react-router'
+import TouchBack from '../../common/touchBack';
 const s = require('./index.scss');
 
 class ForgetPass extends React.Component<any,any> {
-    render() {
-        return (
-            <div className={s.forgetPassWrapper}>
-                <Navigator to="/auth/login" title="忘记密码"/>
-                <form className={s.forgetPassForm}>
-                    <p className="topRadius">
-                        <input type="text" placeholder="请输入您的登录邮箱号" className="commonInput"/>
-                    </p>
-                    <p className={s.formButtonP}>
-                        <input type="submit" className="formButton" value="发送邮件"/>
-                    </p>
-                </form>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className={s.forgetPassWrapper}>
+        <TouchBack target="/auth/login">
+          <Navigator to="/auth/login" title="忘记密码"/>
+          <form className={s.forgetPassForm}>
+            <p className="topRadius">
+              <input type="text" placeholder="请输入您的登录邮箱号" className="commonInput"/>
+            </p>
+            <p className={s.formButtonP}>
+              <input type="submit" className="formButton" value="发送邮件"/>
+            </p>
+          </form>
+        </TouchBack>
+      </div>
+    )
+  }
 }
 
 export default ForgetPass;
