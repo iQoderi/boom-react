@@ -12,7 +12,6 @@ import Register from './components/layout/auth/register';
 import ForgetPass from './components/layout/auth/forgetPass';
 import ReActive from './components/layout/auth/reActive';
 import ResetPass from './components/layout/auth/resetPass';
-
 import Home from './components/layout/home';
 
 const RouterApp = ()=> {

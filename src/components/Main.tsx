@@ -12,8 +12,7 @@ class AppComponent extends React.Component<any,any> {
   }
   render() {
     return (
-      <div>
-        <Tip tip="312312"/>
+      <div className="vh">
         {this.props.children}
       </div>
     );
