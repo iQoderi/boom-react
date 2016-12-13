@@ -14,7 +14,6 @@ interface TipProps {
   tip:tip
 }
 
-
 const Tip = ({tip}:TipProps)=> {
   return (
     <span className={s.TopTips} style={{display:tip.show?'inline-block':'none'}}>

@@ -6,9 +6,13 @@ declare const require: any;
 import * as React from 'react'
 const s = require('./index.scss');
 
-const Loading = ()=> {
+interface LoadingProps {
+  show: boolean
+}
+
+const Loading = ({show}:LoadingProps)=> {
   return (
-    <div className={s.loading}>
+    <div className={s.loading} style={{display:show?'block':'none'}}>
       <div className={s.spinner2}>
         <div className={s.spinnercontainer+" "+s.container1}>
           <div className={s.circle1}></div>

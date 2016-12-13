@@ -4,7 +4,7 @@
 ///<reference path='../../typings/modules/react/index.d.ts'/>
 import * as React from 'react';
 import {observer, inject} from 'mobx-react';
-import Loding from './plugins/loading/index';
+import Loading from './plugins/loading/index';
 import Tip from './plugins/tip/index';
 import DevTools from 'mobx-react-devtools';
 
@@ -16,11 +16,11 @@ class AppComponent extends React.Component<any,any> {
   }
 
   render() {
-    console.log(this.props);
     const {UIStore}=this.props;
     return (
       <div className="vh">
         <Tip tip={UIStore.tip}/>
+        <Loading show={UIStore.isLoading}/>
         {this.props.children}
         <DevTools/>
       </div>
