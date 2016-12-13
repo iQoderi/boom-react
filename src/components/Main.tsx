@@ -5,6 +5,7 @@
 import * as React from 'react';
 import Loding from './plugins/loading/index.ts';
 import Tip from './plugins/tip/index.ts';
+import DevTools from 'mobx-react-devtools';
 
 class AppComponent extends React.Component<any,any> {
   constructor(props){
@@ -14,6 +15,7 @@ class AppComponent extends React.Component<any,any> {
     return (
       <div className="vh">
         {this.props.children}
+        <DevTools/>
       </div>
     );
   }

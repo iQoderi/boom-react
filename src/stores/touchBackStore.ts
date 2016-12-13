@@ -1,15 +1,15 @@
 /**
  * Created by qoder on 16-12-13.
  */
-import {observable, computed, action,useStrict} from 'mobx';
+import {observable, computed, action, useStrict} from 'mobx';
 import goto from '../utils/goto';
 
 useStrict(true);
 class TouchBackStore {
-  @observable public startX: number=0;
-  @observable public startY: number=0;
-  @observable public endX: number=0;
-  @observable public endY: number=0;
+  @observable public startX: number = 0;
+  @observable public startY: number = 0;
+  @observable public endX: number = 0;
+  @observable public endY: number = 0;
   private minX: number = 100;
   private maxY: number = 50;
 
@@ -40,4 +40,5 @@ class TouchBackStore {
     }
   }
 }
+
 export default TouchBackStore;
