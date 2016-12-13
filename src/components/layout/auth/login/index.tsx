@@ -7,15 +7,14 @@
 declare const require: any;
 import * as React from 'react';
 import Navigator from '../../../plugins/navigator/index.ts';
-import {Link} from 'react-router'
+import {Link} from 'react-router';
 const s = require('./index.scss');
 
-class Login extends React.Component<any,any>{
-  _handleLogin = (e)=> {
-    e.preventDefault();
+class Login extends React.Component<any,any> {
+  public _handleLogin = (e)=> {
   }
 
-  render() {
+  public render() {
     return (
       <div className={s.loginWrapper}>
         <Navigator title="登录账号"/>

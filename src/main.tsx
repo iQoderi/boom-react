@@ -8,11 +8,15 @@ import * as ReactDOM from 'react-dom';
 import {Provider} from 'mobx-react';
 import TouchBackStore from './stores/touchBackStore';
 import UIStore from './stores/uiStore';
+import authStore from './stores/authStore';
 import RouterApp from './router';
 
 const rootElement = document.getElementById('app');
 ReactDOM.render(
-  <Provider touchBackStore={TouchBackStore} UIStore={UIStore}>
+  <Provider
+    authStore={authStore}
+    touchBackStore={TouchBackStore}
+    UIStore={UIStore}>
     {RouterApp()}
   </Provider>,
   rootElement
