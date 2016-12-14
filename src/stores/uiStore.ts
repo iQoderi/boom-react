@@ -19,17 +19,17 @@ class UIStore {
   private timer;
 
   @action
-  public showLoading(): void {
+  public showLoading = (): void=> {
     this.isLoading = true;
   }
 
   @action
-  public hideLoading(): void {
+  public hideLoading = (): void=> {
     this.isLoading = false;
   }
 
   @action
-  public showTip(content) {
+  public showTip = (content: string): void=> {
     this.tip = {
       show: true,
       content
@@ -37,12 +37,18 @@ class UIStore {
   }
 
   @action
-  public hideTip() {
-    this.tip.show = false;
+  public hideTip = (): void=> {
+    this.tip = {
+      show: false,
+      content: ''
+    }
   }
 
   @action
-  public anycHideTip(time: number = 1500) {
+  public asyncHideTip = (tip: string, time: number = 1500)=> {
+    console.log(this);
+    clearTimeout(this.timer);
+    this.showTip(tip);
     this.timer = setTimeout(()=> {
       this.hideTip();
     }, time)

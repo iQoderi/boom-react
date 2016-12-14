@@ -24,14 +24,14 @@ class TouchBackStore {
   }
 
   @action
-  public handleTouchStart(e: any): void {
+  public handleTouchStart=(e: any): void=> {
     const {clientX, clientY}=e.touches[0];
     this.startX = clientX;
     this.startY = clientY;
   }
 
   @action
-  public handleTouchEnd(e: any, target): void {
+  public handleTouchEnd=(e: any, target): void=> {
     const {clientX, clientY}=e.changedTouches[0];
     this.endX = clientX;
     this.endY = clientY;

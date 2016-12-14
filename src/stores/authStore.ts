@@ -4,13 +4,12 @@
  */
 
 declare const require: any;
-import {observable, computed, action, autorun, reaction} from 'mobx';
+import {computed, action, autorun, reaction} from 'mobx';
 import UIStore from './uiStore';
 import API from '../api';
+import codeHandler from '../utils/codeHandler';
 import * as fetch from 'isomorphic-fetch';
 
-console.log(fetch, 'called');
-console.log(API.auth);
 interface LoginBody {
   email: string,
   password: string
@@ -18,22 +17,45 @@ interface LoginBody {
 
 class AuthStore {
   @action
-  public login() {
+  public login = (body: LoginBody): void=> {
+    UIStore.showLoading();
     fetch(API.auth.login, {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/json'
       },
-      body: JSON.stringify({
-        email: '841599872@qq.com',
-        password: '123456'
-      })
-    }).then((res)=>{
+      body: JSON.stringify(body)
+    }).then((res)=> {
+      UIStore.hideLoading();
       return res.json();
-    }).then((json)=>{
-      console.log(json);
+    }).then((json)=> {
+      if (json.code === 0) {
+        UIStore.asyncHideTip('登录成功');
+      } else {
+        codeHandler(json.code, UIStore.asyncHideTip)
+      }
+    })
+  }
+
+  @action
+  public register = (body: LoginBody)=> {
+    UIStore.showLoading();
+    fetch(API.auth.register, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'Application/json'
+      },
+      body: JSON.stringify(body)
+    }).then((res)=> {
+      return res.json();
+    }).then((json)=> {
+      if (json.code === 0) {
+        UIStore.asyncHideTip('注册成功');
+      } else {
+        codeHandler(json.code, UIStore.asyncHideTip)
+      }
     })
   }
 }
 
-export default AuthStore;
+export default new AuthStore();
