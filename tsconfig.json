@@ -10,6 +10,7 @@
     "experimentalDecorators": true,
     "outDir": "dist"
   },
+  "lib":"ES2015",
   "exclude": [
     "dist",
     "node_modules",

@@ -1,3 +1,3 @@
 require('./styles/reset.scss');
-require('promise')
+const  Promise=require('es6-promise');
 import './main';
