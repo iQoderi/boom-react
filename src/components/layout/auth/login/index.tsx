@@ -9,20 +9,53 @@ import * as React from 'react';
 import Navigator from '../../../plugins/navigator/index.ts';
 import {Link} from 'react-router';
 import {observer, inject} from 'mobx-react';
+import checkData from '../../../../utils/checkData';
+import regex from '../../../../utils/regex';
+const Promise = require('es6-promise');
 const s = require('./index.scss');
 
 
-@inject('authStore')
+@inject('authStore', 'UIStore')
 @observer
 class Login extends React.Component<any,any> {
+  public _checkData = (body)=> {
+    let {asyncHideTip}=this.props.UIStore;
+    let copyBody = {
+      email: {
+        name: '邮箱',
+        regex: regex.email,
+        value: body.email
+      },
+      password: {
+        name: '密码',
+        regex: regex.password,
+        value: body.password
+      }
+    }
+    return new Promise((resolve)=> {
+      let checkResult = checkData(copyBody);
+      checkResult.then(()=> {
+        resolve(body);
+      }).catch((err)=> {
+        asyncHideTip(err);
+      })
+    })
+  }
+
+
   public _handleLogin = (e)=> {
     e.preventDefault();
+    const {login}=this.props.authStore;
+    const refs = this.refs as any;
+    let {email, password}=refs;
     const body = {
-      email: '841599872@qq.com',
-      password: '1234567'
+      email: email.value,
+      password: password.value
     }
-    const {authStore}=this.props;
-    authStore.login(body);
+    let result = this._checkData(body);
+    result.then((data)=> {
+      login(data);
+    })
   }
 
   public render() {
@@ -31,10 +64,14 @@ class Login extends React.Component<any,any> {
         <Navigator title="登录账号"/>
         <form className={s.LoginForm}>
           <p className="topRadius">
-            <input type="text" placeholder="请输入您的登录邮箱号" className="commonInput"/>
+            <input
+              ref="email"
+              type="text" placeholder="请输入您的登录邮箱号" className="commonInput"/>
           </p>
           <p className="bottomRadius">
-            <input type="text" placeholder="请输入您的密码" className="commonInput"/>
+            <input
+              ref="password"
+              type="password" placeholder="请输入您的密码" className="commonInput"/>
           </p>
           <p className={s.formButtonP}>
             <input
